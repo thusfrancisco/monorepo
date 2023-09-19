@@ -7,6 +7,7 @@ pnpm install -g nx
 # Create NX workspace with @monodon/rust plugin
 WORKSPACE_NAME="monorepo"
 
-pnpx create-nx-workspace@latest $WORKSPACE_NAME --preset=@monodon/rust --packageManager=pnpm
+pnpx create-nx-workspace@latest $WORKSPACE_NAME --preset=@monodon/rust --packageManager=pnpm --nxCloud=false
+
 # Add @nxext/svelte plugin
 pnpm install @nxext/svelte --save-dev
