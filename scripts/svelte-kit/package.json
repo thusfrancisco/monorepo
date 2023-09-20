@@ -1,0 +1,7 @@
+{
+	"scripts": {},
+	"devDependencies": {
+		"create-svelte": "^5.0.6"
+	},
+	"type": "module"
+}
