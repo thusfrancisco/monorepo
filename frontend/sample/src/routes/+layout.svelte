@@ -1,5 +1,2 @@
-<script lang="ts">
-    import 'assets/styles.css';
-</script>
-
+<link rel="stylesheet" href="styles.css">
 <slot></slot>

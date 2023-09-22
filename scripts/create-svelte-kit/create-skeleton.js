@@ -1,14 +1,14 @@
 import { create } from 'create-svelte';
 
 
-const appName = process.argv[2];
 const templateMap = {
   'app': 'skeleton',
   'lib': 'skeletonlib'
 };
 const template = templateMap[
-  (process.argv[3]) ? process.argv[3] : (function(){throw "Not enough arguments."}())
+  (process.argv[2]) ? process.argv[2] : (function(){throw "Not enough arguments."}())
 ];
+const appName = process.argv[3];
 
 
 await create(appName, {
