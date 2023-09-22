@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import 'dotenv/config';
 
-console.log(`NODE_ENV=${process.env.NODE_ENV}`);
+//console.log(`ASSETS_URL=${process.env.ASSETS_URL}`);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -22,7 +22,14 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		paths: {
+			assets: process.env.ASSETS_URL ? process.env.ASSETS_URL : '',
+		},
+        files: {
+			// If no CDN URL is set, get whatever package's assets.
+            assets: process.env.ASSETS_URL ? process.env.ASSETS_URL : "./node_modules/assets",
+        },
 	}
 };
 
