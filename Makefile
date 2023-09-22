@@ -9,3 +9,6 @@ create-svelte-app:
 
 create-svelte-lib:
 	. ./scripts/create-svelte-kit/create-static.sh lib $(APP_NAME)
+
+create-assets-package:
+	. ./scripts/create-assets-package/create.sh
