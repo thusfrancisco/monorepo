@@ -1,9 +1,6 @@
 #!/bin/bash
-
-# Setup PNPM and NX
-pnpm setup
-pnpm init
-pnpm install -g nx
+# Setup PNPM
+source setup_pnpm.sh
 
 # Create project structure
 mkdir frontend
@@ -13,7 +10,9 @@ mkdir libs/frontend
 mkdir libs/backend
 mkdir infrastructure
 
-# Add NX as a dev dependency to the PNPM workspace
+# Setup PNPM Workspace and NX Workspace
+pnpm init
+pnpm install -g nx
 pnpx nx@latest init
 
 # Add the @monodon/rust plugin to the NX workspace
