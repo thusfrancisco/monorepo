@@ -1,2 +1,10 @@
 **/node_modules
 **/pnpm-lock.yaml
+
+nx
+nx.bat
+.nx
+.nx/installation
+.nx/cache
+.nx/installation
+.nx/cache
