@@ -19,4 +19,4 @@ pnpx nx@latest init
 pnpm add -D -w @monodon/rust
 
 # Add Playwright
-pnpm -i -D @nx/playwright
+pnpm install -D -w @nx/playwright
