@@ -4,7 +4,7 @@ APP_NAME=$2
 
 echo Creating app "$APP_NAME"
 
-SCRIPT_DIRECTORY=scripts/create-astro
+cd $TARGET
 
 # Create Astro project based on Svelte template
 npm create astro@latest $APP_NAME --template framework-svelte --no-install --no-git --typescript strict

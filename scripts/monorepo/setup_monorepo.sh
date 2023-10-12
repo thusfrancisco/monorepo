@@ -1,6 +1,9 @@
 #!/bin/bash
-# Setup PNPM
-source setup_pnpm.sh
+# Copy files to $TARGET
+cp -a scripts/monorepo/files/. $TARGET/
+
+# cd to $TARGET
+cd $TARGET
 
 # Create project structure
 mkdir assets
@@ -11,12 +14,13 @@ mkdir libs/frontend
 mkdir libs/backend
 mkdir infrastructure
 
+# Setup PNPM
+source setup_pnpm.sh
+
 # Setup PNPM Workspace
-cat scripts/monorepo/files/pnpm-workspace.yaml > pnpm-workspace.yaml
 pnpm init
 
 # Setup NX Workspace
-cat scripts/monorepo/files/nx.json > nx.json
 pnpm install -g nx
 pnpx nx@latest init
 
