@@ -11,8 +11,12 @@ mkdir libs/frontend
 mkdir libs/backend
 mkdir infrastructure
 
-# Setup PNPM Workspace and NX Workspace
+# Setup PNPM Workspace
+cat scripts/monorepo/files/pnpm-workspace.yaml > pnpm-workspace.yaml
 pnpm init
+
+# Setup NX Workspace
+cat scripts/monorepo/files/nx.json > nx.json
 pnpm install -g nx
 pnpx nx@latest init
 
