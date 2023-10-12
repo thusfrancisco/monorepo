@@ -1,0 +1,15 @@
+@property --vibrate-size {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@keyframes vibrate-size {
+  0% {
+    background-size: 120% 120%;
+  }
+
+  100% {
+    background-size: var(--vibrate-size) var(--vibrate-size);
+  }
+}

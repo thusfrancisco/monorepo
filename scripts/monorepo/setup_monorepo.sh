@@ -3,6 +3,7 @@
 source setup_pnpm.sh
 
 # Create project structure
+mkdir assets
 mkdir frontend
 mkdir backend
 mkdir libs

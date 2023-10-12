@@ -1,0 +1,32 @@
+:root {
+  --clr-light: #00F6ED;
+  --clr-bg: #0E1428;
+  --clr-orange: #F33E2D;
+  --clr-purple: #7A28CB;
+  --clr-contrast: #ff0059;
+  --clr-white: white;
+}
+
+body {
+  /*Responsive text*/
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, input {
+  color: var(--clr-light);
+  font-family: "Roboto Mono";
+}
+
+@property --vibrate-duration {
+  syntax: "<time>";
+  inherits: false;
+  initial-value: 3s;
+}
+
+.vibrate-size {
+  animation: vibrate-size var(--vibrate-duration) ease-in-out infinite;
+  animation-direction: alternate;
+}
