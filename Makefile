@@ -5,6 +5,9 @@ init:
 	. ./scripts/monorepo/setup_pnpm.sh
 	cd monorepo
 
+assets:
+	. ./scripts/assets/setup.sh
+
 astro:
 	. ./scripts/astro/create.sh app $(NAME)
 
