@@ -1,0 +1,92 @@
+@property --orientation-deg {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 90deg;
+}
+
+@keyframes rotate {
+  0% {
+    --orientation-deg: 90deg;
+  }
+  25% {
+    --orientation-deg: 170deg;
+  }
+  35% {
+    --orientation-deg: 190deg;
+  }
+  65% {
+    --orientation-deg: 350deg;
+  }
+  85% {
+    --orientation-deg: 370deg;
+  }
+  100% {
+    --orientation-deg: 450deg;
+  }
+}
+
+@-moz-keyframes rotate {
+  0% {
+    --orientation-deg: 90deg;
+  }
+  25% {
+    --orientation-deg: 170deg;
+  }
+  35% {
+    --orientation-deg: 190deg;
+  }
+  65% {
+    --orientation-deg: 350deg;
+  }
+  85% {
+    --orientation-deg: 370deg;
+  }
+  100% {
+    --orientation-deg: 450deg;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    --orientation-deg: 90deg;
+  }
+  25% {
+    --orientation-deg: 170deg;
+  }
+  35% {
+    --orientation-deg: 190deg;
+  }
+  65% {
+    --orientation-deg: 350deg;
+  }
+  85% {
+    --orientation-deg: 370deg;
+  }
+  100% {
+    --orientation-deg: 450deg;
+  }
+}
+
+@property --vibrate-deg {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: -20deg;
+}
+
+@keyframes vibrate-hue {
+  100% {
+    filter: hue-rotate(var(--vibrate-deg));
+  }
+}
+
+@-moz-keyframes vibrate-hue {
+  100% {
+    filter: hue-rotate(var(--vibrate-deg));
+  }
+}
+
+@-webkit-keyframes vibrate-hue {
+  100% {
+    filter: hue-rotate(var(--vibrate-deg));
+  }
+}

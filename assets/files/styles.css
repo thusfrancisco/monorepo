@@ -5,6 +5,10 @@
   --clr-purple: #7A28CB;
   --clr-contrast: #ff0059;
   --clr-white: white;
+  
+  --font-size-s: clamp(0.5em, 1.5vh, 1.5em);
+  --font-size-m: clamp(1em, 1vw, 1.5em);
+  --font-size-l: clamp(1em, 2.5vh, 3em);
 }
 
 body {
@@ -20,13 +24,72 @@ body, h1, h2, h3, h4, h5, h6, p, input {
   font-family: "Roboto Mono";
 }
 
+a {
+  color: var(--clr-contrast);
+  text-decoration: none;
+}
+
+a, p {
+  font-size: var(--font-size-s);
+}
+
+p {
+  font-weight: 300;
+}
+
+.center {
+  align-items: center;
+  border: none;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
 @property --vibrate-duration {
   syntax: "<time>";
   inherits: false;
   initial-value: 3s;
 }
 
-.vibrate-size {
-  animation: vibrate-size var(--vibrate-duration) ease-in-out infinite;
+.vibrate-hue {
+  animation: vibrate-hue var(--vibrate-duration) ease-in-out infinite;
+  -moz-animation: vibrate-hue var(--vibrate-duration) ease-in-out infinite;
+  -webkit-animation: vibrate-hue var(--vibrate-duration) ease-in-out infinite;
   animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+}
+
+.vibrate-size {
+  -moz-animation: vibrate-size var(--vibrate-duration) ease-in-out infinite;
+  -webkit-animation: vibrate-size var(--vibrate-duration) ease-in-out infinite;
+  animation: vibrate-size var(--vibrate-duration) ease-in-out infinite;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.border-gradient {
+  background: linear-gradient(var(--clr-bg), var(--clr-bg)) padding-box, linear-gradient(var(--orientation-deg), var(--clr-contrast) 50%, var(--clr-purple), var(--clr-light)) border-box;
+  -moz-animation: rotate var(--vibrate-duration) linear infinite;
+  -webkit-animation: rotate var(--vibrate-duration) linear infinite;
+  animation: rotate var(--vibrate-duration) linear infinite;
+  border: 1px solid transparent;
+}
+
+.heading {
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  letter-spacing: 0.2vw;
+  margin: 0.2vw;
+}
+
+.highlight {
+  color: var(--clr-contrast);
+}
+
+.narrow {
+  text-align: justify;
+  text-align-last: center;
+  width: clamp(330px, 85vw, 70vh);;
 }

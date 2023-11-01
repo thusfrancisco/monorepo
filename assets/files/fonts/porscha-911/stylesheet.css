@@ -1,0 +1,18 @@
+@font-face {
+    font-family: '911 Porscha';
+    src: url('911Porscha.eot');
+    src: url('911Porscha.eot?#iefix') format('embedded-opentype'),
+        url('911Porscha.woff2') format('woff2'),
+        url('911Porscha.woff') format('woff'),
+        url('911Porscha.ttf') format('truetype'),
+        url('911Porscha.svg#911Porscha') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.porscha-911 {
+  font-family: '911 Porscha';
+  font-weight: normal;
+  font-style: normal;
+}

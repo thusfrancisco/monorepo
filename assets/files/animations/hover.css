@@ -1,0 +1,8 @@
+.hover {
+  border-radius: calc(var(--short-side) / 2);
+  transition: border-radius 0.2s cubic-bezier( 0.79, 0.33, 0.14, 0.53 );
+}
+
+.hover:hover, .hover:focus, .hover:focus-within {
+  border-radius: 1px;
+}
