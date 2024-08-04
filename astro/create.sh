@@ -20,7 +20,7 @@ pnpm add --workspace --filter=$APP_NAME assets
 pnpm install --filter=$APP_NAME svelte
 pnpm install --filter=$APP_NAME @astrojs/svelte
 
-# Install NodeJS
+# Install NodeJS for dynamic serve
 pnpm install --filter=$APP_NAME @astrojs/node
 
 # Copy template files

@@ -6,9 +6,9 @@ any:
 
 # Create make.env file with MAKE_DIR=$SUBMODULE_DIR
 # Move surrogate.Makefile to parent directory
-init:
-	echo "MAKE_DIR=$(notdir ${PWD})" > ../make.env
-	cat surrogate.Makefile > ../Makefile
+# init:
+# 	echo "MAKE_DIR=$(notdir ${PWD})" > ../make.env
+# 	cat surrogate.Makefile > ../Makefile
 
 setup-monorepo:
 	. ./monorepo/setup_monorepo.sh $(NAME)
